@@ -64,6 +64,17 @@ def test2():
     hist(image_1.flatten(), 128)
     show()
 
+def test3():
+    # 交互式标注，使用ginput()函数
+    image_1 = array(Image.open('./素材/壁纸.jpg'))
+    imshow(image_1)
+    print('Please click 3 points')
+    x = ginput(3)
+    # 等待用户在绘图窗口的图像区域点击三次
+    #  程序将这些点击的图标(x,y)自动保存在x列表里
+    print('you clicked:',x)
+    show()
+
 
 if __name__ == '__main__':
-    test2()
+    test3()
